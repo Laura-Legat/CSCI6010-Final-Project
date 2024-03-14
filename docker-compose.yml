@@ -5,7 +5,7 @@ services:
     container_name: postgres
     environment:
       POSTGRES_DB: bigdata
-      POSTGRES_USER: llegat # feel free to change this
+      POSTGRES_USER: bigdata # feel free to change this
       POSTGRES_PASSWORD: tImPgDBfBDc!32# # feel free to change this
       PGDATA: /var/lib/postgresql/data
     ports:
@@ -19,7 +19,7 @@ services:
     image: dpage/pgadmin4:latest
     container_name: pgadmin
     environment:
-      PGADMIN_DEFAULT_EMAIL: llegat@example.com # feel free to change this
+      PGADMIN_DEFAULT_EMAIL: bigdata@example.com # feel free to change this
       PGADMIN_DEFAULT_PASSWORD: tImPgDBfBDc!32# # feel free to change this
     ports:
       - "5050:80"
