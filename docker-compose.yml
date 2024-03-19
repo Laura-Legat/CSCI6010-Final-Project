@@ -2,18 +2,16 @@ version: '3.8'
 services:
   postgres:
     image: postgres:latest
-    container_name: postgres
+    container_name: postgres # use this as "Host name/address" when connecting a new pgadmin server
     environment:
       POSTGRES_DB: bigdata
       POSTGRES_USER: bigdata # feel free to change this
       POSTGRES_PASSWORD: tImPgDBfBDc!32# # feel free to change this
-      PGDATA: /var/lib/postgresql/data
+      PGDATA: /var/lib/postgresql/data/pgdata
     ports:
       - "5432:5432"
-    networks:
-      - pg-network
     volumes:
-      - pg-data:/var/lib/postgresql/data
+      - ./data:/var/lib/postgresql/data
 
   pgadmin:
     image: dpage/pgadmin4:latest
@@ -23,11 +21,5 @@ services:
       PGADMIN_DEFAULT_PASSWORD: tImPgDBfBDc!32# # feel free to change this
     ports:
       - "5050:80"
-    networks:
-      - pg-network
-
-networks:
-  pg-network:
-
-volumes:
-  pg-data:
+    volumes:
+      - ./data:/data
