@@ -6,11 +6,15 @@ from sqlalchemy import text
 engine = create_engine('postgresql://bigdata:tImPgDBfBDc!32#@localhost/postgres')
 
 try:
+    with open('./data/droptables.sql', 'rt') as file:
+        delete_queries = file.read()
+
     # Execute schema.sql containing CREATE statements
     with open('./data/schema.sql', 'r') as file:
         create_queries = file.read()
 
     with engine.connect() as conn:
+        #conn.execute(text(delete_queries))
         conn.execute(text(create_queries))
 
     # Read data from a specific sheet in the .xlsx file
