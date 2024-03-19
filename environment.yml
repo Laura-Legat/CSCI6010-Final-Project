@@ -1,0 +1,8 @@
+name: bigdata_finalproj
+channels:
+  - defaults
+dependencies:
+  - pandas
+  - sqlalchemy
+  - ipython
+  - openpyxl
