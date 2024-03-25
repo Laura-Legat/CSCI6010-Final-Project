@@ -6,3 +6,4 @@ dependencies:
   - sqlalchemy
   - ipython
   - openpyxl
+  - psycopg2
