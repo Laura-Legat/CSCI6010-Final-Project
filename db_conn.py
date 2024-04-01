@@ -3,7 +3,7 @@ from sqlalchemy import create_engine
 from sqlalchemy import text
 
 # Connect to the PostgreSQL database using SQLAlchemy
-engine = create_engine('postgresql://bigdata:tImPgDBfBDc!32#@localhost/postgres')
+engine = create_engine('postgresql://bigdata:tImPgDBfBDc!32#@localhost/bigdata')
 
 try:
     with open('./data/droptables.sql', 'rt') as file:
