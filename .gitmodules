@@ -1,3 +1,6 @@
 [submodule "prac_comp_zooplankton_proj"]
 	path = prac_comp_zooplankton_proj
 	url = https://github.com/jainarinen/prac_comp_zooplankton_proj
+[submodule "cape_fear_copepod_mapping"]
+	path = cape_fear_copepod_mapping
+	url = https://github.com/jainarinen/cape_fear_copepod_mapping
